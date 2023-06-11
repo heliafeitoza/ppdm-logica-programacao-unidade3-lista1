@@ -1,0 +1,26 @@
+<script>
+  // Implemente um algoritmo que leia as notas e os nomes de 5 alunos 
+  // armazenando os dados em vetores de 5 posições, sendo que as notas serão 
+  // armazenadas em um vetor de reais e os nomes em um outro vetor do tipo 
+  // cadeia de caracteres. Ao final o algoritmo deve escrever na tela somente 
+  // os nomes dos alunos que tiraram nota maior que 5.0.
+
+  let total = 5
+  let notas = []
+  let nomes = []
+
+  for (let i = 0; i < total; i++) {
+    nomes[i] = prompt("digite o nome do aluno Nº: " + (i + 1))
+    notas[i] = parseFloat(prompt("digite a nota do aluno Nº: " + (i + 1)))
+  }
+
+  let nomesQuemTirouAcimaDe5 = []
+
+  for (let i = 0; i < total; i++) {
+    if (notas[i] > 5) {
+      nomesQuemTirouAcimaDe5.push(nomes[i])
+    }
+  }
+
+  alert("Alunos com notas acima de cinco: \n" + nomesQuemTirouAcimaDe5.join("\n"))
+</script>

@@ -1,0 +1,16 @@
+<script>
+  // Refaça o script anterior, mas agora pergunte ao usuário quantos números 
+  // ele deseja inserir no array. Depois, o usuário vai preenchendo elemento por 
+  // elemento do vetor. Ao final, exiba o array e o array ao contrário 
+  // (generalização do script anterior).
+
+  let total = parseInt(prompt("informe quantos números deseja inserir no array:"))
+  let numeros = []
+
+  for (let i = 0; i < total; i++) {
+    numeros[i] = parseInt(prompt("digite o " + (i + 1) + "º número:"))
+  }
+
+  alert("array original: " + numeros)
+  alert("array modificado: " + numeros.reverse())
+</script>

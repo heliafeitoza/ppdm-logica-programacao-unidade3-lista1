@@ -1,0 +1,24 @@
+<script>
+  // Elabore um algoritmo que armazene o nome e duas notas de 5 alunos e imprima
+  // uma listagem contendo nome, as duas notas e a média de cada aluno.
+
+  let total = 5
+  let alunos = []
+
+  for (let i = 0; i < total; i++) {
+    let nome = prompt("digite o nome do aluno Nº: " + (i + 1))
+    let nota1 = parseFloat(prompt("digite a nota1 do aluno Nº: " + (i + 1)))
+    let nota2 = parseFloat(prompt("digite a nota2 do aluno Nº: " + (i + 1)))
+    let media = (nota1 + nota2) / 2
+
+    alunos.push([nome, nota1, nota2, media])
+  }
+
+  let resultado = ""
+
+  for (let i = 0; i < total; i++) {
+    resultado += `NOME: ${alunos[i][0]} - NOTA1:  ${alunos[i][1]} - NOTA2:  ${alunos[i][2]} - MÉDIA:  ${alunos[i][3]} \n`
+  }
+
+  alert(resultado)
+</script>
